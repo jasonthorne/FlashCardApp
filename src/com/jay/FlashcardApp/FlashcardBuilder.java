@@ -64,8 +64,10 @@ public class FlashcardBuilder {
         mainPanel.add(answerJScrollPane); //add scrollpane which CONTAINS the answer text area
         mainPanel.add(nextButton);
 
-        //Add to the frame:
-        //frame.getContentPane().add(b)
+        //Add JFrame 'mainPanel' to the frame:
+        frame.getContentPane().add(BorderLayout.CENTER, mainPanel); //get the content pane from the frame, and add components to that. (one which centers everything, and 'mainPanel')
+        frame.setSize(500, 600); //width, height
+        frame.setVisible(true); //MAKE FRAME VISIBLE!!! :P
 
     }
 
