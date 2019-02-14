@@ -2,6 +2,8 @@ package com.jay.FlashcardApp;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class FlashcardBuilder {
@@ -20,7 +22,7 @@ public class FlashcardBuilder {
         //create a frame
         frame = new JFrame("Flashcard");
 
-        //provide gracefull close of frame
+        //provide graceful close of frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //++++create a JPanel to hold everything together (Goes on top of frame)
@@ -63,6 +65,18 @@ public class FlashcardBuilder {
         mainPanel.add(answerJLabel); //add answer label
         mainPanel.add(answerJScrollPane); //add scrollpane which CONTAINS the answer text area
         mainPanel.add(nextButton);
+        nextButton.addActionListener(new NextCardListener()); //Create and add a 'NextCardListener' obj to button's actionListener
+
+        //Create a menuBar and it's items:
+        JMenuBar menuBar = new JMenuBar(); //menuBar is a container
+        JMenu fileMenu = new JMenu("File"); //create a menu to add to menuBar container ("File" is text shown)
+        JMenuItem newMenuItem = new JMenuItem("New");//create a menu item ("New" is text shown)
+        JMenuItem saveMenuItem = new JMenuItem("Save");//create a menu item ("Save" is text shown)
+
+        //Add event listeners to menuItem items
+        newMenuItem.addActionListener(new newMenuItemListener());
+
+
 
         //Add JFrame 'mainPanel' to the frame:
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel); //get the content pane from the frame, and add components to that. (one which centers everything, and 'mainPanel')
@@ -82,6 +96,16 @@ public class FlashcardBuilder {
                 new FlashcardBuilder();//this will run our 'FlashcardBuilder'
             }
         });
+    }
+
+    class NextCardListener implements ActionListener{ //ActionListener is an interface we need to implement from
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            System.out.println("'Next' button clicked");
+
+        }
     }
 
 
