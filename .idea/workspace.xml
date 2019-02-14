@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9696b264-1199-4c3a-bdc8-d9c5f030337e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/jay/FlashcardApp/Flashcard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FlashcardApp/com/jay/FlashcardApp/FlashCardBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FlashcardApp/com/jay/FlashcardApp/FlashCardBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashCardBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +17,8 @@
       <file leaf-file-name="FlashcardBuilder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="221">
+              <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#668#669#0" expanded="true" />
@@ -61,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -186,7 +182,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="697" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -198,11 +194,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12939297" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12755905" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.105726875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -242,8 +238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="221">
+          <caret line="67" column="10" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
