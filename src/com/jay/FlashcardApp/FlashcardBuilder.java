@@ -68,15 +68,24 @@ public class FlashcardBuilder {
         nextButton.addActionListener(new NextCardListener()); //Create and add a 'NextCardListener' obj to button's actionListener
 
         //Create a menuBar and it's items:
-        JMenuBar menuBar = new JMenuBar(); //menuBar is a container
-        JMenu fileMenu = new JMenu("File"); //create a menu to add to menuBar container ("File" is text shown)
-        JMenuItem newMenuItem = new JMenuItem("New");//create a menu item ("New" is text shown)
-        JMenuItem saveMenuItem = new JMenuItem("Save");//create a menu item ("Save" is text shown)
+        JMenuBar menuBar = new JMenuBar(); //menuBar is a container (which is EMPTY)
+        JMenu fileMenu = new JMenu("File"); //create a menu to ADD to menuBar container ("File" is text shown)
+        JMenuItem newMenuItem = new JMenuItem("New");//create a menu item to ADD to menu("New" is text shown)
+        JMenuItem saveMenuItem = new JMenuItem("Save");//create a menu item to ADD to menu ("Save" is text shown)
 
         //Add event listeners to menuItem items
         newMenuItem.addActionListener(new newMenuItemListener());
+        saveMenuItem.addActionListener(new saveMenuItemListener());
 
+        //Add menu items to menu
+        fileMenu.add(newMenuItem);
+        fileMenu.add(saveMenuItem);
 
+        //Add menu to menuBar
+        menuBar.add(fileMenu);
+
+        //Add menuBar to frame (Added to 'frame', NOT 'mainPanel', as it needs to be in its own special location on page)
+        frame.setJMenuBar(menuBar);
 
         //Add JFrame 'mainPanel' to the frame:
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel); //get the content pane from the frame, and add components to that. (one which centers everything, and 'mainPanel')
@@ -98,6 +107,8 @@ public class FlashcardBuilder {
         });
     }
 
+    //++++++++++++++++++++ACTION LISTENERS++++++++++++++++++++++++++++++++
+
     class NextCardListener implements ActionListener{ //ActionListener is an interface we need to implement from
 
         @Override
@@ -109,6 +120,23 @@ public class FlashcardBuilder {
     }
 
 
+    private class newMenuItemListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            System.out.println("'newMenuItem' clicked");
+
+        }
+    }
+
+    private class saveMenuItemListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            System.out.println("'saveMenuItem' clicked");
+
+        }
+    }
 }
 
 
