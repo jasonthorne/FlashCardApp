@@ -44,11 +44,11 @@ public class FlashcardBuilder {
         answer.setFont(myFont); //add myFont
 
         //create JscrollPanes to add a scroll to text areas
-        JScrollPane questionJScrollPane = new JScrollPane(question); //create question scroll pane
+        JScrollPane questionJScrollPane = new JScrollPane(question); //create question scroll pane, PASSING IN 'question' text area
         questionJScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS); //ensure scroll bar is always vertical
         questionJScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); //ensure NO horizonal scrollbar
 
-        JScrollPane answerJScrollPane = new JScrollPane(answer); //create answer scroll pane
+        JScrollPane answerJScrollPane = new JScrollPane(answer); //create answer scroll pane, , PASSING IN 'answer' text area
         answerJScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS); //ensure scroll bar is always vertical
         answerJScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER); //ensure NO horizonal scrollbar
 
