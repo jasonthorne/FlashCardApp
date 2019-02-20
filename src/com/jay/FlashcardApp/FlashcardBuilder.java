@@ -92,6 +92,9 @@ public class FlashcardBuilder {
         frame.setSize(500, 600); //width, height
         frame.setVisible(true); //MAKE FRAME VISIBLE!!! :P
 
+        //create an instance of an Arraylist for holding holding 'Flascard' class objects
+        cardList = new ArrayList<Flashcard>();
+
     }
 
     public static void main(String[] args){
@@ -116,7 +119,16 @@ public class FlashcardBuilder {
 
             System.out.println("'Next' button clicked");
 
+            //Create a flashcard Object, passing in 'question' and 'answer' 'JTextArea' text
+            Flashcard card = new Flashcard(question.getText(), answer.getText());
+
+            //add flashcard obj ('card') to arrayList of Flashcard objects
+            cardList.add(card);
+
+            //clear the text area, ready for next input
+            clearCard();
         }
+
     }
 
 
@@ -136,6 +148,15 @@ public class FlashcardBuilder {
             System.out.println("'saveMenuItem' clicked");
 
         }
+    }
+
+
+    //clears card text areas, ready for new input
+    private void clearCard() {
+
+        question.setText("");
+        answer.setText("");
+        question.requestFocus(); //sets the focus of the cursor to be on the question field
     }
 }
 
