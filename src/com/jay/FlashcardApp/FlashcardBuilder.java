@@ -4,7 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class FlashcardBuilder {
 
@@ -147,16 +151,54 @@ public class FlashcardBuilder {
 
             System.out.println("'saveMenuItem' clicked");
 
+            //Create a flashcard Object, passing in 'question' and 'answer' 'JTextArea' text
+            Flashcard card = new Flashcard(question.getText(), answer.getText());
+
+            //add flashcard obj ('card') to arrayList of Flashcard objects
+            cardList.add(card);
+
+            //Create a file dialog with 'file chooser' (allows user to choose where to save file)+++++++++++
+            JFileChooser fileSave = new JFileChooser();
+            fileSave.showOpenDialog(frame); //this is shown from the frame, so frame is a required parameter.
+            saveFile(fileSave.getSelectedFile()); //'saveFile' takes a 'File' type as a param
+
         }
+
+
     }
 
 
     //clears card text areas, ready for new input
     private void clearCard() {
 
-        question.setText("");
-        answer.setText("");
+        question.setText(""); //rewrite the text to nothing
+        answer.setText(""); //rewrite the text to nothing
         question.requestFocus(); //sets the focus of the cursor to be on the question field
+    }
+
+    //accepts and saves a file
+    private void saveFile(File selectedFile) {
+
+        //try catch incase of issues
+        try {
+
+            //BufferedWriter is an efficient way of writing to files. It requires a FileWriter obj though, which in turn requires the file itself
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(selectedFile));
+
+            //cardIterator obj for iterating through our arraylist of Flashcard objects (cardList)
+            Iterator<Flashcard> cardIterator = cardList.iterator();
+
+            //spin thorugh iterator
+            while (cardIterator.hasNext()){ //while Iterator's arraylist has a next item
+                Flashcard card = (Flashcard)cardIterator.next(); //create a new Flashcard obj from that item. '(Flashcard)' cast is to guarantee that the item will be a Flashcard obj. A wise precacious measure!
+                bufferedWriter.write(card.getQuestion() + "/"); //write the card objs getQuestion string to file
+
+            }
+
+        } catch (Exception e){
+
+        }
+
     }
 }
 
