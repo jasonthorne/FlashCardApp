@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9696b264-1199-4c3a-bdc8-d9c5f030337e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardPlayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="FlashcardBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="96" column="58" lean-forward="true" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="58" />
+            <state relative-caret-position="239">
+              <caret line="90" column="121" lean-forward="true" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="121" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4967#4968#0" expanded="true" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="FlashcardPlayer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="307">
+              <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -402,8 +402,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="96" column="58" lean-forward="true" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="58" />
+        <state relative-caret-position="239">
+          <caret line="90" column="121" lean-forward="true" selection-start-line="90" selection-start-column="7" selection-end-line="90" selection-end-column="121" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4967#4968#0" expanded="true" />
@@ -414,8 +414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jay/FlashcardApp/FlashcardPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="307">
+          <caret line="113" column="9" lean-forward="true" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
