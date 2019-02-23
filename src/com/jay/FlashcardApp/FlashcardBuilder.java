@@ -159,7 +159,7 @@ public class FlashcardBuilder {
 
             //Create a file dialog with 'file chooser' (allows user to choose where to save file)+++++++++++
             JFileChooser fileSave = new JFileChooser();
-            fileSave.showOpenDialog(frame); //this is shown from the frame, so frame is a required parameter.
+            fileSave.showSaveDialog(frame); //this is shown from the frame, so frame is a required parameter.
             saveFile(fileSave.getSelectedFile()); //'saveFile' takes a 'File' type as a param
 
         }
@@ -183,19 +183,28 @@ public class FlashcardBuilder {
         try {
 
             //BufferedWriter is an efficient way of writing to files. It requires a FileWriter obj though, which in turn requires the file itself
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(selectedFile));
+            BufferedWriter myWriter = new BufferedWriter(new FileWriter(selectedFile));
 
             //cardIterator obj for iterating through our arraylist of Flashcard objects (cardList)
             Iterator<Flashcard> cardIterator = cardList.iterator();
 
-            //spin thorugh iterator
+            //spin through iterator
             while (cardIterator.hasNext()){ //while Iterator's arraylist has a next item
                 Flashcard card = (Flashcard)cardIterator.next(); //create a new Flashcard obj from that item. '(Flashcard)' cast is to guarantee that the item will be a Flashcard obj. A wise precacious measure!
-                bufferedWriter.write(card.getQuestion() + "/"); //write the card objs getQuestion string to file
+                myWriter.write(card.getQuestion() + "/"); //write the card objs getQuestion string to file + a "/"
+                myWriter.write(card.getAnswer() + "\n"); //write the card objs getAnswer string to file + a new line
 
+                //format will be written like this:
+                //Where does Nessie live?/Loch Ness
             }
 
+            //close writer ++++IMPORTANT!
+            myWriter.close();
+
         } catch (Exception e){
+
+            System.out.println("She cannie take it captain!");
+            e.printStackTrace(); //show error
 
         }
 
