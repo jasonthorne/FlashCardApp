@@ -24,7 +24,7 @@ public class FlashcardBuilder {
         //build the user interface
 
         //create a frame
-        frame = new JFrame("Flashcard");
+        frame = new JFrame("Flashcard"); //"Flashcard" is title
 
         //provide graceful close of frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
