@@ -2,7 +2,7 @@ package com.jay.FlashcardApp;
 
 public class Flashcard {
 
-    //instance variables
+    //instance vars
     private String question;
     private String answer;
 

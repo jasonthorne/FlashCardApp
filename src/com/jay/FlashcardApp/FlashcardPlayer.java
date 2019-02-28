@@ -4,9 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.StringTokenizer;
 
 public class FlashcardPlayer {
 
@@ -73,10 +76,8 @@ public class FlashcardPlayer {
 
         //add mainPanel to frame
         frame.getContentPane().add(BorderLayout.CENTER, mainPanel); //get the content pane from the frame, and add components to that. (one which centers everything, and 'mainPanel')
-        frame.setSize(640, 500); //height, width
+        frame.setSize(640, 500); //width, height
         frame.setVisible(true); //MAKE FRAME VISIBLE!!! :P
-
-
 
     }
 
@@ -117,6 +118,57 @@ public class FlashcardPlayer {
 
     //opens a passed File
     private void loadFile(File selectedFile) {
+
+        //instantiate cardList array
+        cardList = new ArrayList<Flashcard>(); //'<Flashcard> ensures it holds flashcard objects'
+
+        try { //Try needed for safety as we're dealing with reading/writing
+
+            //Using a 'bufferedReader' as it allows us to be more efficient with memory:
+            BufferedReader reader = new BufferedReader(new FileReader(selectedFile)); //needs passed in a fileReader obj, which itself needs passed in the selected file
+            String line = null;
+
+            while ((line = reader.readLine()) != null) { //what is read from EACH line in the file, is put into our 'line' string (while there is content in the file line (!=null)
+
+                makeCard(line); //send line contents to makeCard()
+            }
+
+
+
+        }catch (Exception e){
+
+            System.out.println("Oh noes! Couldn't read file!");
+            e.printStackTrace();
+
+        }
+
+        //show the first card in the list:
+        cardIterator = cardList.iterator();
+
+    }
+
+    private void makeCard(String lineToParse) {
+
+        //===================================
+        //ONE WAY OF DOING THIS:
+        /*
+        String[] result = lineToParse.split("/"); //array now holds: [question, answer]
+
+        //create new flashcard with a question and answer
+        Flashcard card = new Flashcard(result[0], result[1]);
+        cardList.add(card); //add card to cardList array
+        System.out.println("made a card! :P");
+        */
+        //=====================================
+        //ANOTHER (MORE MODERN) WAY:
+
+        //splits the contents of the line into 'tokens' by the delimeter passed in ("/").
+        StringTokenizer result = new StringTokenizer(lineToParse, "/");
+        if(result.hasMoreTokens()){
+            Flashcard card = new Flashcard(result.nextToken(), result.nextToken());
+            cardList.add(card); //add card to cardList array
+            System.out.println("made a card! :P");
+        }
 
     }
 }
