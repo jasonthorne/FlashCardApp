@@ -193,10 +193,8 @@ public class FlashcardPlayer {
         currentCard = (Flashcard) cardIterator.next(); //cast to 'Flashcard' for safety! (though shouldnt be needed!)
 
         display.setText(currentCard.getQuestion());
-        myButton.setText("Show Answer"); //?????????????????????????????????
+        myButton.setText("Show Answer");
         isShowAnswer = true;
     }
-
-
 
 }

@@ -132,7 +132,6 @@ public class FlashcardBuilder {
             //clear the text area, ready for next input
             clearCard();
         }
-
     }
 
 
@@ -161,9 +160,7 @@ public class FlashcardBuilder {
             JFileChooser fileSave = new JFileChooser();
             fileSave.showSaveDialog(frame); //this is shown from the frame, so frame is a required parameter.
             saveFile(fileSave.getSelectedFile()); //'saveFile' takes a 'File' type as a param
-
         }
-
 
     }
 
